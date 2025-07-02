@@ -8,4 +8,4 @@ RUN mvn clean package -DskipTests
 
 EXPOSE 8080
 
-CMD ["java", "-jar", "target/tanaguru-engine.jar"]
+CMD ["java", "-jar", "target/tanaguru-engine-2.3.1.jar"]
