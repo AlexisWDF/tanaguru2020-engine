@@ -12,8 +12,8 @@ FROM eclipse-temurin:11-jre
 
 WORKDIR /app
 
-# Copier uniquement le jar depuis l'étape build
-COPY --from=build /app/target/tanaguru-engine-2.3.1.jar /app/tanaguru-engine.jar
+# Copier le jar depuis le sous-dossier tanaguru-engine/target
+COPY --from=build /app/tanaguru-engine/target/tanaguru-engine-2.3.1.jar /app/tanaguru-engine.jar
 
 EXPOSE 8080
 
