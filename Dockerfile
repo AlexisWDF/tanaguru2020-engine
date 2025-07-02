@@ -4,8 +4,9 @@ WORKDIR /app
 
 COPY . /app
 
-RUN mvn clean package -DskipTests
+RUN mvn clean package -DskipTests \
+    && cp target/tanaguru-engine-*.jar target/tanaguru-engine.jar
 
 EXPOSE 8080
 
-CMD ["java", "-jar", "target/tanaguru-engine-2.3.1.jar"]
+CMD ["java", "-jar", "target/tanaguru-engine.jar"]
